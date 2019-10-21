@@ -1,0 +1,12 @@
+2019-10-21 09:41:01,265 1 INFO ? odoo: Odoo version 13.0-20191021 
+2019-10-21 09:41:01,265 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2019-10-21 09:41:01,265 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/13.0', '/mnt/extra-addons'] 
+2019-10-21 09:41:01,265 1 INFO ? odoo: database: odoo@db:5432 
+2019-10-21 09:41:01,399 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2019-10-21 09:41:01,467 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2019-10-21 09:41:01,467 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/13.0 
+2019-10-21 09:41:01,467 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2019-10-21 09:41:01,622 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2019-10-21 09:41:01,628 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 0a5d7643f73b:8069 
+2019-10-21 09:41:03,099 1 INFO ? odoo.http: HTTP Configuring static files 
+2019-10-21 09:41:03,111 1 INFO ? odoo.http: Generating nondb routing

@@ -8,6 +8,7 @@ ENV LANG C.UTF-8
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
+            apt-transport-https \
             ca-certificates \
             curl \
             wait-for-it \

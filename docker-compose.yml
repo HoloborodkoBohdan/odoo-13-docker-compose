@@ -1,24 +1,50 @@
 version: '2'
 services:
   db:
+    container_name: postgresql_db_for_odoo13
     image: postgres:11.6
     environment:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
       - POSTGRES_DB=postgres
-    restart: always
+    networks:
+      - postgres
+    ports:
+      - "5432:5432"
     volumes:
         - ./postgresql:/var/lib/postgresql/data
+    restart: always
 
   odoo13:
+    container_name: odoo13
     image: odoo:latest
     depends_on:
       - db
     ports:
       - "8071:8069"
+    networks:
+      - postgres
     tty: true
     command: -- --dev=reload
     volumes:
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
-    restart: always         
+    restart: always
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    depends_on:
+      - db
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge

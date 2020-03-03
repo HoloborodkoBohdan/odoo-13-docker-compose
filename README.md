@@ -39,6 +39,7 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 
 * odoo:latest
 * postgres:11.6
+* pgadmin4
 
 # Odoo 13 screenshots
 
@@ -47,3 +48,19 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 ![odoo13-apps-screen.png](screenshots/odoo13-apps-screen.png)
 
 ![odoo13-settings-screen.png](screenshots/odoo13-settings-screen.png)
+
+# Access to PgAdmin:
+
+You can use PgAdmin if you need. It's on port 5050 (127.0.0.1:5050 for example) and default credentials are:
+
+* email: pgadmin4@pgadmin.org
+* password: admin
+
+If you don't need PgAdmin, you can comment or delete it in docker-compose.yml.
+
+# Add a new server in PgAdmin:
+
+* Host name/address: db
+* Port: 5432
+* Username as POSTGRES_USER: odoo
+* Password as POSTGRES_PASSWORD: odoo

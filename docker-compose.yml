@@ -11,7 +11,7 @@ services:
         - ./postgresql:/var/lib/postgresql/data
 
   odoo13:
-    image: odoo:13
+    image: odoo:latest
     depends_on:
       - db
     ports:

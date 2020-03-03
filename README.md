@@ -37,13 +37,8 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 
 # docker-compose.yml
 
-* odoo:13.0
-* postgres:12.0
-
-# Use specific release of Odoo
-
-You can change **ODOO_RELEASE** version to one of values from https://nightly.odoo.com/13.0/nightly/deb/.
-
+* odoo:latest
+* postgres:11.6
 
 # Odoo 13 screenshots
 

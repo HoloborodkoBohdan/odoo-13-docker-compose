@@ -17,7 +17,7 @@ services:
 
   odoo13:
     container_name: odoo13
-    image: odoo:latest
+    image: odoo:13
     depends_on:
       - db
     ports:
